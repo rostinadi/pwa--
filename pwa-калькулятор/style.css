@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Чтобы контент не вылезал за границы */
+    width: 300px; /* Устанавливаем фиксированную ширину */
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    text-align: left;
+    border: none;
+    background-color: #eee;
+    padding-right: 10 px; /*  Уменьшите это значение  */
+   }
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавное изменение цвета */
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+button:active { /* Эффект нажатия */
+    background-color: #bbb;
+}
+
+/* Особый стиль для кнопки "=" */
+button:nth-child(16) { /* 16-я кнопка в сетке */
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+}
+
+button:nth-child(16):hover {
+    background-color: #43A047; /* Более темный зеленый при наведении */
+}
+
+button:nth-child(16):active {
+    background-color: #388E3C; /* Еще более темный при нажатии */
+}
